@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geri Bildirim Formu Gönder</title>
+    <link rel="stylesheet" href="/css/sendFeedback.css">
+</head>
+<body>
+    <h1>Geri Bildirim Formu Gönder</h1>
+    <form action="/admin/send-feedback" method="POST">
+        <label for="course">Kurs Adı:</label>
+        <input type="text" id="course" name="course" required><br>
+
+        <label for="date">Tarih:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="topic">Konu:</label>
+        <input type="text" id="topic" name="topic" required><br>
+
+        <textarea name="feedbackText" id="feedbackText" placeholder="Enter your feedback"></textarea>
+
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>

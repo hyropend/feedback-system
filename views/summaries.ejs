@@ -1,0 +1,15 @@
+<h2>Feedback Summaries</h2>
+<form method="GET" action="/feedback/summaries">
+    <input type="text" name="courseName" placeholder="Course Name">
+    <input type="date" name="date" placeholder="Date">
+    <button type="submit">Filter</button>
+    <link rel="stylesheet" href="/css/summaries.css">
+</form>
+<ul>
+    <% feedbacks.forEach(feedback => { %>
+        <li>
+            <h3><%= feedback.courseName %> - <%= feedback.date.toDateString() %></h3>
+            <p><%= feedback.summary %></p>
+        </li>
+    <% }) %>
+</ul>
